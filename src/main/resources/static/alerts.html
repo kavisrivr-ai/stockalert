@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StockAlert - Reorder Alerts</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="logo">
+        <span>📦</span>
+        StockAlert
+    </div>
+
+    <nav>
+
+        <a href="index.html">
+            Dashboard
+        </a>
+
+        <a href="products.html">
+            Products
+        </a>
+
+        <a href="stock.html">
+            Stock Movement
+        </a>
+
+        <a href="alerts.html" class="active">
+            Reorder Alerts
+        </a>
+
+        <a href="fast-moving.html">
+            Fast Moving
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main class="container">
+
+    <section class="page-title">
+
+        <h1>
+            Reorder Alerts
+        </h1>
+
+        <p>
+            Monitor products that require restocking.
+        </p>
+
+    </section>
+
+
+    <section class="section">
+
+        <div class="section-header">
+
+            <div>
+
+                <h2>
+                    Inventory Reorder Alerts
+                </h2>
+
+                <p>
+                    Alerts are automatically created when
+                    stock reaches or falls below the reorder threshold.
+                </p>
+
+            </div>
+
+            <button
+                type="button"
+                class="btn-primary"
+                onclick="loadAlerts()">
+
+                Refresh Alerts
+
+            </button>
+
+        </div>
+
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Alert ID
+                        </th>
+
+                        <th>
+                            Product
+                        </th>
+
+                        <th>
+                            SKU
+                        </th>
+
+                        <th>
+                            Reorder Quantity
+                        </th>
+
+                        <th>
+                            Status
+                        </th>
+
+                        <th>
+                            Created At
+                        </th>
+
+                        <th>
+                            Action
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="alertsTable">
+
+                    <tr>
+
+                        <td
+                            colspan="7"
+                            class="empty">
+
+                            Loading alerts...
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

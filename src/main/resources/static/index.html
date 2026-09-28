@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StockAlert - Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="logo">
+        <span>📦</span>
+        StockAlert
+    </div>
+
+    <nav>
+
+        <a href="index.html" class="active">
+            Dashboard
+        </a>
+
+        <a href="products.html">
+            Products
+        </a>
+
+        <a href="stock.html">
+            Stock Movement
+        </a>
+
+        <a href="alerts.html">
+            Reorder Alerts
+        </a>
+
+        <a href="fast-moving.html">
+            Fast Moving
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main class="container">
+
+    <!-- Welcome Section -->
+
+    <section class="welcome">
+
+        <div>
+
+            <div class="small-title">
+                INVENTORY MANAGEMENT
+            </div>
+
+            <h1>
+                Welcome to StockAlert
+            </h1>
+
+            <p>
+                Monitor inventory, track stock movements,
+                and manage reorder alerts easily.
+            </p>
+
+        </div>
+
+        <div class="dashboard-icon">
+            📦
+        </div>
+
+    </section>
+
+
+    <!-- Statistics -->
+
+    <section class="stats">
+
+
+        <!-- Total Products -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                📦
+            </div>
+
+            <div>
+
+                <p>
+                    Total Products
+                </p>
+
+                <h2 id="totalProducts">
+                    0
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <!-- Total Stock -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                📊
+            </div>
+
+            <div>
+
+                <p>
+                    Total Stock
+                </p>
+
+                <h2 id="totalStock">
+                    0
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <!-- Low Stock -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                ⚠️
+            </div>
+
+            <div>
+
+                <p>
+                    Low Stock
+                </p>
+
+                <h2 id="lowStockCount">
+                    0
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <!-- Open Alerts -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                🔔
+            </div>
+
+            <div>
+
+                <p>
+                    Open Alerts
+                </p>
+
+                <h2 id="alertCount">
+                    0
+                </h2>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Low Stock Products -->
+
+    <section class="section">
+
+        <div class="section-header">
+
+            <div>
+
+                <h2>
+                    Low Stock Products
+                </h2>
+
+                <p>
+                    Products that have reached or fallen below
+                    their reorder threshold.
+                </p>
+
+            </div>
+
+            <a
+                href="alerts.html"
+                class="view-link">
+
+                View Alerts →
+
+            </a>
+
+        </div>
+
+
+        <div class="table-container">
+
+            <table class="table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Product
+                        </th>
+
+                        <th>
+                            SKU
+                        </th>
+
+                        <th>
+                            Current Stock
+                        </th>
+
+                        <th>
+                            Reorder Threshold
+                        </th>
+
+                        <th>
+                            Status
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="lowStockTable">
+
+                    <tr>
+
+                        <td
+                            colspan="5"
+                            class="empty">
+
+                            Loading...
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- Quick Actions -->
+
+    <section class="section">
+
+        <div class="section-header">
+
+            <div>
+
+                <h2>
+                    Quick Actions
+                </h2>
+
+                <p>
+                    Manage your inventory quickly.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="quick-actions">
+
+
+            <a
+                href="products.html"
+                class="action-card">
+
+                <div>
+                    ➕
+                </div>
+
+                <h3>
+                    Add Product
+                </h3>
+
+                <p>
+                    Add a new product to inventory.
+                </p>
+
+            </a>
+
+
+            <a
+                href="stock.html"
+                class="action-card">
+
+                <div>
+                    📦
+                </div>
+
+                <h3>
+                    Stock Movement
+                </h3>
+
+                <p>
+                    Record stock in or stock out.
+                </p>
+
+            </a>
+
+
+            <a
+                href="alerts.html"
+                class="action-card">
+
+                <div>
+                    🔔
+                </div>
+
+                <h3>
+                    Reorder Alerts
+                </h3>
+
+                <p>
+                    View and fulfill reorder alerts.
+                </p>
+
+            </a>
+
+
+            <a
+                href="fast-moving.html"
+                class="action-card">
+
+                <div>
+                    📈
+                </div>
+
+                <h3>
+                    Fast Moving
+                </h3>
+
+                <p>
+                    Analyze your best-selling products.
+                </p>
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

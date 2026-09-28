@@ -1,0 +1,651 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+/* =========================
+   TOP NAVIGATION
+========================= */
+
+.topbar {
+    height: 70px;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 45px;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 700;
+    color: #111827;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo span {
+    font-size: 27px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #6b7280;
+
+    padding: 10px 14px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+nav a:hover {
+    background: #f3f4f6;
+    color: #111827;
+}
+
+nav a.active {
+    background: #111827;
+    color: white;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+    width: 92%;
+    max-width: 1250px;
+
+    margin: 35px auto;
+}
+
+
+/* =========================
+   WELCOME
+========================= */
+
+.welcome {
+    background: #111827;
+    color: white;
+
+    border-radius: 18px;
+
+    padding: 35px 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+.small-title {
+    font-size: 12px;
+    letter-spacing: 2px;
+    opacity: 0.7;
+
+    margin-bottom: 10px;
+}
+
+.welcome h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.welcome p {
+    color: #d1d5db;
+}
+
+.dashboard-icon {
+    font-size: 65px;
+    opacity: 0.8;
+}
+
+
+/* =========================
+   STAT CARDS
+========================= */
+
+.stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
+
+    padding: 22px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 12px;
+
+    background: #f3f4f6;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+}
+
+.stat-card p {
+    color: #6b7280;
+    font-size: 13px;
+
+    margin-bottom: 5px;
+}
+
+.stat-card h2 {
+    font-size: 25px;
+    color: #111827;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 16px;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.section-header p {
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.view-link {
+    color: #111827;
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   QUICK ACTIONS
+========================= */
+
+.quick-actions {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.action-card {
+    text-decoration: none;
+
+    color: #111827;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    padding: 18px;
+
+    display: flex;
+
+    gap: 13px;
+
+    align-items: center;
+
+    transition: 0.2s;
+}
+
+.action-card:hover {
+    border-color: #9ca3af;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+.action-card > span {
+    font-size: 25px;
+}
+
+.action-card h3 {
+    font-size: 14px;
+
+    margin-bottom: 4px;
+}
+
+.action-card p {
+    color: #6b7280;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+.table-container {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+thead {
+    background: #f9fafb;
+}
+
+th {
+    text-align: left;
+
+    padding: 14px;
+
+    font-size: 12px;
+
+    color: #6b7280;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+td {
+    padding: 15px 14px;
+
+    border-bottom: 1px solid #f0f0f0;
+
+    font-size: 13px;
+}
+
+tbody tr:hover {
+    background: #fafafa;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.status {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+.status-low {
+    background: #fee2e2;
+
+    color: #b91c1c;
+}
+
+.status-good {
+    background: #dcfce7;
+
+    color: #15803d;
+}
+
+.status-open {
+    background: #fef3c7;
+
+    color: #92400e;
+}
+
+.status-fulfilled {
+    background: #dcfce7;
+
+    color: #15803d;
+}
+
+
+/* =========================
+   EMPTY MESSAGE
+========================= */
+
+.empty {
+    text-align: center;
+
+    padding: 35px;
+
+    color: #9ca3af;
+}
+
+
+/* =========================
+   FORMS
+========================= */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.form-group label {
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: #374151;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+
+    padding: 11px 13px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 13px;
+
+    background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #111827;
+
+    box-shadow:
+        0 0 0 2px rgba(17, 24, 39, 0.08);
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+    border: none;
+
+    cursor: pointer;
+
+    border-radius: 8px;
+
+    padding: 11px 18px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.btn-primary {
+    background: #111827;
+
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #000000;
+}
+
+.btn-edit {
+    background: #f3f4f6;
+
+    color: #111827;
+
+    margin-right: 5px;
+}
+
+.btn-delete {
+    background: #fee2e2;
+
+    color: #b91c1c;
+}
+
+.btn-success {
+    background: #166534;
+
+    color: white;
+}
+
+
+/* =========================
+   FORM BUTTON AREA
+========================= */
+
+.form-actions {
+    margin-top: 20px;
+
+    display: flex;
+
+    gap: 10px;
+}
+
+
+/* =========================
+   PAGE TITLE
+========================= */
+
+.page-title {
+    margin-bottom: 25px;
+}
+
+.page-title h1 {
+    font-size: 30px;
+
+    margin-bottom: 7px;
+}
+
+.page-title p {
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   ALERT CARD
+========================= */
+
+.alert-card {
+    border: 1px solid #e5e7eb;
+
+    border-left: 5px solid #dc2626;
+
+    border-radius: 10px;
+
+    padding: 18px;
+
+    margin-bottom: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.alert-card h3 {
+    font-size: 15px;
+
+    margin-bottom: 5px;
+}
+
+.alert-card p {
+    color: #6b7280;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .topbar {
+        padding: 0 20px;
+    }
+
+    nav {
+        gap: 2px;
+    }
+
+    nav a {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .stats {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .quick-actions {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .topbar {
+        height: auto;
+
+        padding: 15px;
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .container {
+        width: 94%;
+    }
+
+    .welcome {
+        padding: 25px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+    .welcome h1 {
+        font-size: 25px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}

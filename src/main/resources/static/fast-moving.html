@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StockAlert - Fast Moving Products</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="logo">
+        <span>📦</span>
+        StockAlert
+    </div>
+
+    <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="products.html">Products</a>
+        <a href="stock.html">Stock Movement</a>
+        <a href="alerts.html">Reorder Alerts</a>
+        <a href="fast-moving.html" class="active">Fast Moving</a>
+    </nav>
+
+</header>
+
+
+<main class="container">
+
+    <section class="page-title">
+        <h1>Fast Moving Products</h1>
+        <p>
+            Analyze products based on their sales volume.
+        </p>
+    </section>
+
+
+    <section class="section">
+
+        <div class="section-header">
+
+            <div>
+                <h2>Sales Analysis</h2>
+                <p>
+                    Select a date range and analyze sales.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="form-grid">
+
+            <div class="form-group">
+
+                <label for="fromDate">
+                    From Date
+                </label>
+
+                <input
+                    type="date"
+                    id="fromDate"
+                    required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="toDate">
+                    To Date
+                </label>
+
+                <input
+                    type="date"
+                    id="toDate"
+                    required>
+
+            </div>
+
+        </div>
+
+
+        <div class="form-actions">
+
+            <button
+                type="button"
+                class="btn-primary"
+                id="fastMovingButton">
+
+                Analyze Sales
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <section class="section">
+
+        <div class="section-header">
+
+            <div>
+                <h2>Fast Moving Products</h2>
+
+                <p>
+                    Products are sorted by total sales quantity.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Rank</th>
+                        <th>Product</th>
+                        <th>SKU</th>
+                        <th>Total Sales</th>
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="fastMovingTable">
+
+                    <tr>
+                        <td colspan="4" class="empty">
+                            Select dates and click Analyze Sales.
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
